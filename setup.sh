@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Update and upgrade the system
-sudo apt-get update -y && sudo apt-get upgrade -y
+apt-get update -y && apt-get upgrade -y
 
 # Install necessary packages
-sudo apt-get install -y python3 python3-pip python3-venv
-sudo apt-get install -y portaudio19-dev libsndfile1 ffmpeg
+apt-get install -y python3 python3-pip python3-venv
+apt-get install -y portaudio19-dev libsndfile1 ffmpeg
 
 # Create a virtual environment
 python3 -m venv whisper_env
@@ -19,7 +19,7 @@ pip install pyaudio
 
 # Confirm installations
 echo "Python version:"
-python --version
+python3 --version
 echo "Pip version:"
 pip --version
 echo "FFmpeg version:"
